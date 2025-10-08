@@ -329,41 +329,54 @@
             font-size: 14px;
         }
         
-        /* Testimonials */
-        .testimonials {
+        /* Inside the Community */
+        .community-preview {
             padding: 80px 20px;
             background: white;
         }
         
-        .testimonials-grid {
+        .preview-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 60px;
         }
         
-        .testimonial {
+        .preview-card {
             background: #f8f9fa;
-            padding: 30px;
+            padding: 35px 30px;
             border-radius: 12px;
             border-left: 4px solid #d4af37;
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.7;
+        .preview-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
         
-        .testimonial-author {
+        .preview-title {
+            font-size: 20px;
             font-weight: 700;
+            margin-bottom: 12px;
             color: #1a1a1a;
         }
         
-        .testimonial-result {
-            color: #4caf50;
+        .preview-description {
+            color: #666;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .preview-stat {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #e0e0e0;
             font-weight: 600;
-            margin-top: 8px;
+            color: #4caf50;
         }
         
         /* Final CTA */
@@ -452,20 +465,20 @@
     <section class="stats-bar">
         <div class="stats-container">
             <div class="stat-item">
-                <span class="stat-number">+16.3%</span>
-                <span class="stat-label">Average ROI</span>
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Sportsbooks Monitored</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">+4.2%</span>
-                <span class="stat-label">Average CLV</span>
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Real-Time Scanning</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">247</span>
-                <span class="stat-label">Alerts Per Month</span>
+                <span class="stat-number">200</span>
+                <span class="stat-label">Founder Spots Available</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">89%</span>
-                <span class="stat-label">Members Profitable</span>
+                <span class="stat-number">90s</span>
+                <span class="stat-label">Average Alert Speed</span>
             </div>
         </div>
     </section>
@@ -562,6 +575,54 @@
         </div>
     </section>
 
+    <!-- Inside the Community -->
+    <section class="community-preview">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">What You'll Get Inside</h2>
+                <p class="section-subtitle">Built by bettors, for bettors</p>
+            </div>
+            
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="preview-label">EDUCATION</div>
+                    <h3 class="preview-title">Complete Betting Course</h3>
+                    <p class="preview-description">Step-by-step modules covering expected value, closing line value, bankroll management, Kelly Criterion, and how to avoid getting limited.</p>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-label">ALERTS</div>
+                    <h3 class="preview-title">Live Discord Notifications</h3>
+                    <p class="preview-description">Instant alerts with game details, recommended bet, sportsbook, odds, and calculated +EV percentage. Never miss an opportunity.</p>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-label">TRANSPARENCY</div>
+                    <h3 class="preview-title">Verified Track Record</h3>
+                    <p class="preview-description">Every single alert is logged and tracked. Full access to historical performance data, win/loss records, and CLV analysis.</p>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-label">COMMUNITY</div>
+                    <h3 class="preview-title">Sharp Bettor Network</h3>
+                    <p class="preview-description">Connect with experienced bettors, share strategies, ask questions, and learn from a community focused on long-term profitability.</p>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-label">SUPPORT</div>
+                    <h3 class="preview-title">1-on-1 Strategy Session</h3>
+                    <p class="preview-description">Free personalized consultation to review your betting approach, identify weaknesses, and create a custom plan for your goals.</p>
+                </div>
+                
+                <div class="preview-card">
+                    <div class="preview-label">TOOLS</div>
+                    <h3 class="preview-title">Arbitrage Scanner</h3>
+                    <p class="preview-description">Automated system finds risk-free arbitrage opportunities across sportsbooks. Lock in guaranteed profit regardless of outcome.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing -->
     <section class="pricing">
         <div class="section-container">
@@ -619,41 +680,11 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">What Members Are Saying</h2>
-                <p class="section-subtitle">Real results from real bettors</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Took about 3 weeks to see consistent profit, but CLV was positive from day one. Up $1,247 over 8 weeks. The education alone is worth way more than $67."</p>
-                    <div class="testimonial-author">Mike R., Pennsylvania</div>
-                    <div class="testimonial-result">Profit: $1,247 | 8 weeks</div>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"Got limited on DraftKings after a month, but the multi-book strategy kept me profitable. Now rotating through 8 different books successfully."</p>
-                    <div class="testimonial-author">Jessica T., Illinois</div>
-                    <div class="testimonial-result">ROI: +14.2%</div>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"Finally hit 55% win rate last month. Not huge dollar amounts yet ($680 profit), but I'm learning so much from the community. Patience pays off."</p>
-                    <div class="testimonial-author">Carlos M., New York</div>
-                    <div class="testimonial-result">Win Rate: 55.1%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="section-container">
             <h2>Ready to Stop Losing?</h2>
-            <p>Join hundreds of sharp bettors who profit consistently using +EV strategies</p>
+            <p>Join the waitlist for exclusive founder pricing and early access</p>
             <a href="https://whop.com/checkout/plan_jG4w03t2piGPq?d2c=true" class="cta-primary">Get Started - $67/month</a>
             <p style="margin-top: 30px; font-size: 16px; opacity: 0.8;">First 200 members lock in this price forever</p>
         </div>

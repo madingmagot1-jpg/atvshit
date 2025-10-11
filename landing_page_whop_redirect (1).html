@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addicted to Value - Turn $5K into $140K</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        .header {
+            padding: 60px 0 80px;
+            text-align: center;
+            background: linear-gradient(180deg, #000 0%, #0a1f1a 100%);
+        }
+        
+        .logo {
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #10b981;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 48px;
+        }
+        
+        h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #9ca3af;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+        
+        .cta-subtext {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 16px;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 60px auto;
+            max-width: 900px;
+        }
+        
+        .stat-card {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: #10b981;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-dark {
+            background: #000;
+        }
+        
+        .section-gradient {
+            background: linear-gradient(180deg, #000 0%, #0f1419 50%, #000 100%);
+        }
+        
+        h2 {
+            font-size: 42px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Problem/Solution Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        
+        .card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .card-text {
+            font-size: 15px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+        
+        .card-problem {
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+        
+        .card-problem .card-title {
+            color: #ef4444;
+        }
+        
+        .card-solution {
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+        
+        .card-solution .card-title {
+            color: #10b981;
+        }
+        
+        /* Callout Box */
+        .callout {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid #fbbf24;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .callout-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .callout-text {
+            font-size: 16px;
+            color: #d1d5db;
+        }
+        
+        /* Features List */
+        .features {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            transition: border-color 0.3s;
+        }
+        
+        .feature-item:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .feature-content p {
+            font-size: 15px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+        
+        /* Pricing Card */
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 2px solid #10b981;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 32px;
+            background: #10b981;
+            color: #000;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-label {
+            font-size: 14px;
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .price {
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .price-period {
+            font-size: 24px;
+            color: #6b7280;
+        }
+        
+        .pricing-note {
+            text-align: center;
+            font-size: 16px;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features {
+            margin-bottom: 32px;
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        
+        .check-icon {
+            color: #10b981;
+            font-size: 20px;
+        }
+        
+        .pricing-cta {
+            width: 100%;
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 24px;
+        }
+        
+        .guarantee-text {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 16px;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        
+        .footer-disclaimer {
+            font-size: 12px;
+            color: #4b5563;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            h2 { font-size: 32px; }
+            .stats { grid-template-columns: 1fr; }
+            .card-grid { grid-template-columns: 1fr; }
+            .subtitle { font-size: 18px; }
+            .price { font-size: 56px; }
+        }
+        
+        /* Spots Counter Animation */
+        #spots-remaining {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { border-color: rgba(16, 185, 129, 0.3); }
+            50% { border-color: rgba(16, 185, 129, 0.6); }
+        }
+    </style>
+    <script>
+        // Simulate live counter - starts at 147 and slowly increases
+        let spotsTaken = 147;
+        const maxSpots = 200;
+        
+        function updateCounter() {
+            const element = document.getElementById('spots-taken');
+            const pricingElement = document.getElementById('pricing-spots-taken');
+            if (spotsTaken < maxSpots) {
+                // Random chance to increment (about every 30-60 seconds on average)
+                if (Math.random() < 0.05) { // 5% chance each second
+                    spotsTaken++;
+                    if (element) element.textContent = spotsTaken;
+                    if (pricingElement) pricingElement.textContent = spotsTaken;
+                    
+                    // Add flash animation
+                    if (element) {
+                        element.style.color = '#fbbf24';
+                        setTimeout(() => {
+                            element.style.color = '#10b981';
+                        }, 500);
+                    }
+                }
+            }
+        }
+        
+        // Update counter every second
+        setInterval(updateCounter, 1000);
+        
+        // Initialize counters on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const element = document.getElementById('spots-taken');
+            const pricingElement = document.getElementById('pricing-spots-taken');
+            if (element) element.textContent = spotsTaken;
+            if (pricingElement) pricingElement.textContent = spotsTaken;
+        });
+    </script>
+</head>
+<body>
+    <!-- Hero -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">ADDICTED TO VALUE</div>
+            <div class="tagline">Sports Betting Strategy That Works</div>
+            
+            <h1>I turned <span class="gradient-text">$5,000 into $140,000</span><br>in 18 months using math</h1>
+            
+            <p class="subtitle">Get real-time Discord alerts for +EV bets and arbitrage opportunities across 15+ sportsbooks. Automated system + complete education = consistent profits.</p>
+            
+            <a href="https://whop.com/checkout/plan_jG4w03t2piGPq?d2c=true" target="_blank" class="cta-button">GET STARTED FOR $30/MONTH</a>
+            <div class="cta-subtext">
+                <div id="spots-remaining" style="font-size: 16px; font-weight: 700; color: #10b981; margin-top: 16px;">
+                    <span id="spots-taken">147</span> / 200 spots filled
+                </div>
+                <div style="margin-top: 8px;">Locks in $30/month forever · Price increases to $67/month after</div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">+11.2%</div>
+                    <div class="stat-label">Average ROI</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3,000+</div>
+                    <div class="stat-label">Tracked Bets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+3.8%</div>
+                    <div class="stat-label">Avg CLV</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>Why Most Bettors Lose Money</h2>
+            <p class="section-subtitle">These mistakes cost bettors billions every year</p>
+            
+            <div class="card-grid">
+                <div class="card card-problem">
+                    <div class="card-icon">❌</div>
+                    <h3 class="card-title">Betting on "Feelings"</h3>
+                    <p class="card-text">"I have a good feeling" isn't a strategy. The house edge on parlays is 25-35%. You're designed to lose.</p>
+                </div>
+                
+                <div class="card card-problem">
+                    <div class="card-icon">❌</div>
+                    <h3 class="card-title">Chasing Big Parlays</h3>
+                    <p class="card-text">10-leg parlays look exciting but guarantee long-term losses. Books love these bets for a reason.</p>
+                </div>
+                
+                <div class="card card-problem">
+                    <div class="card-icon">❌</div>
+                    <h3 class="card-title">No Tracking System</h3>
+                    <p class="card-text">If you're not tracking every bet, you have no idea if you're winning or losing long-term.</p>
+                </div>
+                
+                <div class="card card-problem">
+                    <div class="card-icon">❌</div>
+                    <h3 class="card-title">Following "Experts"</h3>
+                    <p class="card-text">Most handicappers only show wins. You need a system you can execute yourself.</p>
+                </div>
+            </div>
+            
+            <div class="callout">
+                <div class="callout-title">Sportsbooks made $14 billion last year</div>
+                <div class="callout-text">They know something most bettors don't: expected value matters more than win rate.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section-gradient">
+        <div class="container">
+            <h2>There's a Better Way</h2>
+            <p class="section-subtitle">Sharp bettors focus on positive expected value (+EV), not just winning more bets</p>
+            
+            <div class="card-grid">
+                <div class="card card-solution">
+                    <div class="card-icon">✓</div>
+                    <h3 class="card-title">Calculate True Probability</h3>
+                    <p class="card-text">Learn to determine if a bet has +EV by comparing true probability to implied odds.</p>
+                </div>
+                
+                <div class="card card-solution">
+                    <div class="card-icon">✓</div>
+                    <h3 class="card-title">Track Closing Line Value</h3>
+                    <p class="card-text">Consistently beating the closing line is the best predictor of long-term profit.</p>
+                </div>
+                
+                <div class="card card-solution">
+                    <div class="card-icon">✓</div>
+                    <h3 class="card-title">Manage Your Bankroll</h3>
+                    <p class="card-text">Use Kelly Criterion for optimal bet sizing. Never risk more than you can afford.</p>
+                </div>
+                
+                <div class="card card-solution">
+                    <div class="card-icon">✓</div>
+                    <h3 class="card-title">Complete Transparency</h3>
+                    <p class="card-text">Every bet tracked and published before game time. Full accountability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>What You Get for $30/Month</h2>
+            <p class="section-subtitle">Everything you need to bet like a professional</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">🔔</div>
+                    <div class="feature-content">
+                        <h3>Real-Time Discord Alerts</h3>
+                        <p>Get instant notifications within 90 seconds of +EV opportunities and arbitrage plays across 15+ sportsbooks including DraftKings, FanDuel, Caesars, and BetMGM.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-content">
+                        <h3>Arbitrage Opportunities</h3>
+                        <p>Lock in guaranteed risk-free profit by betting both sides. Our automated system identifies arb plays across multiple books 24/7.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-content">
+                        <h3>Complete Tracking System</h3>
+                        <p>Every alert tracked and published. Full access to historical performance, win/loss records, and CLV analysis. No cherry-picking.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📚</div>
+                    <div class="feature-content">
+                        <h3>Complete Education Library</h3>
+                        <p>Step-by-step modules on +EV betting, arbitrage, closing line value, bankroll management, Kelly Criterion, and avoiding limits.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <div class="feature-content">
+                        <h3>24/7 Discord Community</h3>
+                        <p>Connect with sharp bettors, share strategies, ask questions, and learn from collective intelligence. Active community support.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-content">
+                        <h3>Multi-Sport Coverage</h3>
+                        <p>NFL, NBA, MLB, NHL, College Football, College Basketball, UFC, and more. Year-round +EV opportunities across every major sport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-gradient">
+        <div class="container">
+            <h2>Lock In Your Price Now</h2>
+            <p class="section-subtitle">
+                <span id="pricing-spots-taken">147</span> / 200 spots filled · Price increases to $67/month after
+            </p>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">LIMITED TIME</div>
+                
+                <div class="pricing-label">First 200 Members Only</div>
+                <div class="price">$30<span class="price-period">/mo</span></div>
+                <div class="pricing-note">Locked forever. No price increases. Ever.</div>
+                
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Real-time Discord alerts for +EV bets & arbitrage</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Automated scanning of 15+ sportsbooks 24/7</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Complete education library & strategy guides</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Full performance tracking & historical data</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>24/7 community support in Discord</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <span class="check-icon">✓</span>
+                        <span>Multi-sport coverage year-round</span>
+                    </div>
+                </div>
+                
+                <a href="https://whop.com/checkout/plan_jG4w03t2piGPq?d2c=true" target="_blank" class="cta-button pricing-cta">START BETTING SMARTER TODAY</a>
+                
+                <div class="guarantee">
+                    <div class="guarantee-text">30-day money-back guarantee</div>
+                    <div class="guarantee-text">Cancel anytime. No commitment.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Is this legal?</div>
+                    <div class="faq-answer">Yes. This is educational content teaching betting strategy. You're learning to analyze bets yourself, not buying picks.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are you selling picks?</div>
+                    <div class="faq-answer">No. I teach you the system so you can make your own decisions. I share my bets for transparency and learning.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you guarantee I'll make money?</div>
+                    <div class="faq-answer">No. Betting always involves risk. +EV betting improves your odds, but there are no guarantees. Only bet what you can afford to lose.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What if I'm a complete beginner?</div>
+                    <div class="faq-answer">Perfect. I explain everything from the ground up. If you understand basic math, you can learn this system.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How much bankroll do I need?</div>
+                    <div class="faq-answer">I recommend $500-1,000 minimum for proper bankroll management, but you can start smaller to learn.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I cancel anytime?</div>
+                    <div class="faq-answer">Yes. No commitment. Cancel anytime. If you're in the first 200 and rejoin later, you keep the $30/month price.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-gradient">
+        <div class="container" style="text-align: center;">
+            <h2>Stop Gambling. Start Investing.</h2>
+            <p class="section-subtitle">Join sharp bettors learning to bet with a mathematical edge</p>
+            <a href="https://whop.com/checkout/plan_jG4w03t2piGPq?d2c=true" target="_blank" class="cta-button">LOCK IN $30/MONTH FOREVER</a>
+            <div class="cta-subtext">First 200 members only • 30-day guarantee</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Addicted to Value. All rights reserved.</p>
+            <p class="footer-disclaimer">Gambling Problem? Call 1-800-GAMBLER. Must be 21+. Educational content only.</p>
+        </div>
+    </footer>
+</body>
+</html>

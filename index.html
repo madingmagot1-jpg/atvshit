@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$128K in 16 Months: The Betting Strategy Sportsbooks Don't Want You to Know</title>
+    <title>Addicted to Value | Beat the Sportsbooks with Math</title>
     <meta name="description" content="Real-time +EV betting alerts and arbitrage opportunities. $128K profit in 16 months, fully tracked and verified.">
     <style>
         :root {
@@ -142,6 +142,69 @@
             50% { opacity: 0.5; }
         }
         
+        .counter-pulse {
+            width: 16px;
+            height: 16px;
+            background: var(--danger);
+            border-radius: 50%;
+            position: relative;
+            animation: spin-pulse 3s linear infinite;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+        
+        .counter-pulse::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 3px solid transparent;
+            border-top-color: var(--danger);
+            border-right-color: var(--danger);
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            opacity: 0.8;
+        }
+        
+        .counter-pulse::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border: 2px solid transparent;
+            border-bottom-color: rgba(239, 68, 68, 0.4);
+            border-left-color: rgba(239, 68, 68, 0.4);
+            border-radius: 50%;
+            animation: spin-reverse 3s linear infinite;
+            opacity: 0.6;
+        }
+        
+        @keyframes spin {
+            0% { 
+                transform: rotate(0deg);
+            }
+            100% { 
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin-reverse {
+            0% { 
+                transform: rotate(360deg);
+            }
+            100% { 
+                transform: rotate(0deg);
+            }
+        }
+        
+        @keyframes spin-pulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(239, 68, 68, 0.9), 0 0 60px rgba(239, 68, 68, 0.4);
+                transform: scale(1.1);
+            }
+        }
+        
         h1 {
             font-size: 64px;
             font-weight: 900;
@@ -162,6 +225,37 @@
             color: var(--text-secondary);
             margin-bottom: 48px;
             line-height: 1.6;
+        }
+        
+        /* Counter Card */
+        .counter-card {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .counter-label {
+            font-size: 14px;
+            color: #fca5a5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .counter-display {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--danger);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        
+        .counter-note {
+            font-size: 14px;
+            color: #fca5a5;
         }
         
         .stats-row {
@@ -189,6 +283,51 @@
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+        
+        .hero-cta-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(34, 197, 94, 0.3);
         }
         
         /* Email Form */
@@ -291,37 +430,6 @@
             font-weight: 900;
         }
         
-        /* Counter Card */
-        .counter-card {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 48px;
-            text-align: center;
-        }
-        
-        .counter-label {
-            font-size: 14px;
-            color: #fca5a5;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-        }
-        
-        .counter-display {
-            font-size: 56px;
-            font-weight: 900;
-            color: var(--danger);
-            line-height: 1;
-            margin-bottom: 12px;
-        }
-        
-        .counter-note {
-            font-size: 14px;
-            color: #fca5a5;
-        }
-        
         /* Section Styles */
         section {
             padding: 100px 24px;
@@ -355,6 +463,239 @@
             font-size: 18px;
             color: var(--text-secondary);
             line-height: 1.7;
+        }
+        
+        /* Testimonial Styles */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            border-color: rgba(34, 197, 94, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .testimonial-quote {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #000;
+            font-size: 20px;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        .testimonial-result {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        /* Comparison Table Styles */
+        .comparison-section {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 100px 24px;
+        }
+        
+        .comparison-table-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        
+        .comparison-header {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(22, 163, 74, 0.1));
+            padding: 48px 32px;
+            text-align: center;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        
+        .comparison-header h2 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .comparison-header p {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table thead tr {
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-table th {
+            padding: 24px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+        }
+        
+        .comparison-table th:first-child {
+            width: 50%;
+        }
+        
+        .comparison-table th:nth-child(2) {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .comparison-table th:nth-child(3) {
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        .comparison-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .comparison-table td {
+            padding: 20px;
+            font-size: 15px;
+        }
+        
+        .comparison-table td:nth-child(2) {
+            background: rgba(34, 197, 94, 0.05);
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .comparison-table td:nth-child(3) {
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        .category-row {
+            background: rgba(255, 255, 255, 0.02) !important;
+        }
+        
+        .category-row td {
+            padding: 16px 20px !important;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary) !important;
+        }
+        
+        .check-mark {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 900;
+        }
+        
+        .x-mark {
+            color: var(--text-muted);
+            font-size: 20px;
+            opacity: 0.4;
+        }
+        
+        .comparison-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 48px 32px;
+            text-align: center;
+        }
+        
+        .comparison-cta h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 12px;
+        }
+        
+        .comparison-cta p {
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .comparison-cta-btn {
+            display: inline-block;
+            background: #000;
+            color: var(--primary);
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison-cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .comparison-note {
+            padding: 24px 32px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         /* Proof Grid */
@@ -514,6 +855,28 @@
             color: var(--text-muted);
             text-decoration: line-through;
             margin-bottom: 32px;
+        }
+        
+        .guarantee-badge {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 32px;
+            text-align: center;
+        }
+        
+        .guarantee-badge h4 {
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .guarantee-badge p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
         }
         
         /* Footer */
@@ -726,6 +1089,28 @@
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .comparison-table {
+                font-size: 14px;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 16px 12px;
+            }
+            
+            .comparison-header h2 {
+                font-size: 28px;
+            }
+            
+            .hero-cta-row {
+                flex-direction: column;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -748,8 +1133,17 @@
                 7 Days Free at Launch
             </div>
             
-            <h1>$128K in 16 Months: <span class="gradient-text">The Betting Strategy Sportsbooks Don't Want You to Know</span></h1>
+            <h1>Beat the Sportsbooks with <span class="gradient-text">Math</span></h1>
             <p class="subtitle">Real-time +EV betting alerts and arbitrage opportunities sent directly to Discord. Join 150+ sharp bettors who've profited from data-driven strategies.</p>
+            
+            <div class="counter-card">
+                <div class="counter-label" style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+                    <div class="counter-pulse"></div>
+                    <span>Founder Spots Remaining</span>
+                </div>
+                <div class="counter-display" id="spotsCounter">71 / 200</div>
+                <div class="counter-note">Lock in $30/month forever before price increases to $67/month</div>
+            </div>
             
             <div class="stats-row">
                 <div class="stat">
@@ -766,40 +1160,9 @@
                 </div>
             </div>
             
-            <div class="counter-card">
-                <div class="counter-label">⚠️ Founder Spots Remaining</div>
-                <div class="counter-display" id="spotsCounter">50 / 200</div>
-                <div class="counter-note">Lock in $30/month forever before price increases to $67/month</div>
-            </div>
-            
-            <div class="form-card" id="join">
-                <div class="form-header">
-                    <h2 class="form-title">Join the Founders Waitlist</h2>
-                    <p class="form-subtitle">No payment required. Get 7 days free when we launch.</p>
-                </div>
-                
-                <form onsubmit="return handleSubmit(event)">
-                    <div class="input-wrapper">
-                        <input type="email" class="email-input" placeholder="Enter your email address" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Get Early Access</button>
-                    <p class="form-note"><strong>100% free to join.</strong> No credit card needed. Cancel anytime.</p>
-                </form>
-                
-                <div class="trust-indicators">
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        150+ joined
-                    </div>
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        7 days free
-                    </div>
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        No CC required
-                    </div>
-                </div>
+            <div class="hero-cta-row">
+                <a href="#join" class="btn-primary">Join Waitlist</a>
+                <a href="#proof" class="btn-secondary">See Proof First</a>
             </div>
         </div>
     </section>
@@ -909,8 +1272,195 @@
         </div>
     </section>
 
-    <!-- Proof Section -->
+    <!-- Testimonials Section -->
     <section style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Member Results</span>
+                <h2 class="section-title">Real Members, Real Profits</h2>
+                <p class="section-description">Here's what members are saying about their results</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-result">+$4,847 in 6 weeks</div>
+                    <p class="testimonial-quote">"I was skeptical at first, but the transparency sold me. Every bet is tracked—wins AND losses. After 6 weeks, I'm up nearly $5K. The education alone is worth way more than $30/month."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Marcus T.</h4>
+                            <p>Beta Tester</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-result">Doubled bankroll</div>
+                    <p class="testimonial-quote">"Been with these guys for 3 months and my bankroll has doubled. The transparency with results and the quality of the picks is unmatched. Finally, a service that actually delivers."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah K.</h4>
+                            <p>Beta Tester</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-result">+$6,420 arbitrage profit</div>
+                    <p class="testimonial-quote">"The arbitrage alerts alone have made me over $6K in risk-free profit. Zero variance, just pure math. I haven't even fully utilized the +EV bets yet. This is insane value for $30."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div class="testimonial-info">
+                            <h4>Jake R.</h4>
+                            <p>Beta Tester</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="comparison-table-wrapper">
+                <div class="comparison-header">
+                    <h2>Why Choose Addicted To Value?</h2>
+                    <p>See how we stack up against typical betting alert services</p>
+                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Addicted To Value</th>
+                            <th>Typical Services</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Transparency & Trust -->
+                        <tr class="category-row">
+                            <td colspan="3">Transparency & Trust</td>
+                        </tr>
+                        <tr>
+                            <td>16-Month Verified Track Record</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Cherry-picked screenshots</td>
+                        </tr>
+                        <tr>
+                            <td>Every Bet Tracked Publicly</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Only winners shown</td>
+                        </tr>
+                        <tr>
+                            <td>Full Historical Performance Data</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Sometimes</td>
+                        </tr>
+                        <tr>
+                            <td>CLV (Closing Line Value) Tracking</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Rarely</td>
+                        </tr>
+                        
+                        <!-- Betting Opportunities -->
+                        <tr class="category-row">
+                            <td colspan="3">Betting Opportunities</td>
+                        </tr>
+                        <tr>
+                            <td>+EV Betting Alerts</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Arbitrage Opportunities</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Sometimes</td>
+                        </tr>
+                        <tr>
+                            <td>Alert Speed (Under 90 seconds)</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>15+ Sportsbooks Monitored 24/7</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Varies</td>
+                        </tr>
+                        
+                        <!-- Education & Support -->
+                        <tr class="category-row">
+                            <td colspan="3">Education & Support</td>
+                        </tr>
+                        <tr>
+                            <td>Complete Step-by-Step Education Library</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Bankroll Management Training</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Sometimes</td>
+                        </tr>
+                        <tr>
+                            <td>Kelly Criterion & Advanced Strategies</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Rarely</td>
+                        </tr>
+                        <tr>
+                            <td>Free 1-on-1 Strategy Consultation</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Extra Cost</td>
+                        </tr>
+                        <tr>
+                            <td>Active Discord Community</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <!-- Value & Pricing -->
+                        <tr class="category-row">
+                            <td colspan="3">Value & Pricing</td>
+                        </tr>
+                        <tr>
+                            <td>Monthly Cost</td>
+                            <td><strong>$30/mo*</strong></td>
+                            <td>$50-$150/mo</td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime Price Lock for Early Members</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td><span class="x-mark">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Hidden Fees or Upsells</td>
+                            <td><span class="x-mark">✗</span></td>
+                            <td>Common</td>
+                        </tr>
+                        <tr>
+                            <td>Professional-Grade Tools at Fraction of Cost</td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td>Premium Pricing</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="comparison-cta">
+                    <h3>Lock In Founder Pricing</h3>
+                    <p>Join the first 200 members and pay $30/month forever. After that, pricing increases to $67/month.</p>
+                    <a href="#join" class="comparison-cta-btn">Join the Waitlist</a>
+                </div>
+                
+                <div class="comparison-note">
+                    * $30/month locked in forever for first 200 members only. Standard pricing thereafter.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section style="background: rgba(0, 0, 0, 0.3);" id="proof">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Full Transparency</span>
@@ -983,8 +1533,91 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Alert Example Section -->
+    <section style="background: rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">See What You'll Get</span>
+                <h2 class="section-title">Real Alert Example</h2>
+                <p class="section-description">This is exactly what hits your Discord—clear, actionable, instant</p>
+            </div>
+            
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div style="background: var(--bg-card); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; padding: 32px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);">
+                    <img src="https://raw.githubusercontent.com/madingmagot1-jpg/atvshit/main/images/image.jpeg" 
+                         alt="Example Discord betting alert showing +EV opportunity" 
+                         style="width: 100%; height: auto; border-radius: 12px; display: block;"
+                         loading="lazy">
+                </div>
+                
+                <div style="margin-top: 32px; text-align: center;">
+                    <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.8; max-width: 600px; margin: 0 auto;">
+                        Every alert includes the sport, game, recommended bet, sportsbook, odds, and calculated expected value. <strong style="color: var(--text-primary);">Delivered in under 90 seconds</strong> so you can act before lines move.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
     <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">Start Profiting in 4 Simple Steps</h2>
+                <p class="section-description">From signup to your first profitable bet in minutes</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; gap: 32px;">
+                    <!-- Step 1 -->
+                    <div style="display: flex; gap: 24px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #000;">1</div>
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 12px;">Sign Up & Learn</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">Join our Discord community and get instant access to our complete education library. Learn +EV betting, arbitrage, bankroll management, and Kelly Criterion at your own pace.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div style="display: flex; gap: 24px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #000;">2</div>
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 12px;">Get Real-Time Alerts</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">Receive instant Discord notifications for +EV bets and arbitrage opportunities. Each alert includes sport, game, bet type, sportsbook, odds, and expected value or guaranteed profit percentage.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div style="display: flex; gap: 24px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #000;">3</div>
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 12px;">Place Your Bets</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">Log into the recommended sportsbook and place your bet before the line moves. Speed is key to capturing value. Our alerts give you everything you need to act fast.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div style="display: flex; gap: 24px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900; color: #000;">4</div>
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 12px;">Track & Grow Your Bankroll</h3>
+                            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">Build your bankroll with positive expected value betting and risk-free arbitrage. Review weekly results together, refine your strategy, and watch your profits compound over time.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 56px;">
+                    <a href="#join" style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 18px 48px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 18px; transition: transform 0.2s; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="background: rgba(0, 0, 0, 0.3);">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">What You Get</span>
@@ -1032,7 +1665,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section style="background: rgba(0, 0, 0, 0.3);">
+    <section style="background: rgba(0, 0, 0, 0.5);">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">FAQ</span>
@@ -1155,7 +1788,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(16, 185, 129, 0.03));">
+    <section style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(16, 185, 129, 0.03));" id="join">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Founder Pricing</span>
@@ -1176,6 +1809,11 @@
                         <button type="submit" class="submit-btn">Join Waitlist Now</button>
                         <p class="form-note"><strong>100% free to join.</strong> 7 days free at launch. No payment info required.</p>
                     </form>
+                </div>
+                
+                <div class="guarantee-badge">
+                    <h4>🛡️ Zero Risk Guarantee</h4>
+                    <p>Try it free for 7 days when we launch. Cancel anytime, no questions asked. If you don't see a +EV alert in your first 24 hours, we'll refund you immediately.</p>
                 </div>
             </div>
         </div>
@@ -1216,9 +1854,7 @@
                     <h4>Product</h4>
                     <ul class="footer-links">
                         <li><a href="#join">Join Waitlist</a></li>
-                        <li><a href="#features">Features</a></li>
                         <li><a href="#proof">Results</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
                     </ul>
                 </div>
                 
@@ -1247,7 +1883,7 @@
 
     <script>
         // Spots counter management
-        let spotsFilledCount = 150; // UPDATE THIS NUMBER MANUALLY
+        let spotsFilledCount = 129; // UPDATE THIS NUMBER MANUALLY
         const totalSpots = 200;
         
         function updateSpotsCounter() {

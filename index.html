@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addicted to Value | Beat the Sportsbooks with Math</title>
     <meta name="description" content="Real-time +EV betting alerts and arbitrage opportunities. $54,645 profit in 4 months, fully tracked and verified.">
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     <style>
         :root {
             --primary: #22c55e;
@@ -77,6 +78,8 @@
             text-decoration: none;
             font-size: 14px;
             transition: transform 0.2s;
+            cursor: pointer;
+            border: none;
         }
         
         .nav-cta:hover {
@@ -191,37 +194,6 @@
             letter-spacing: 0.5px;
         }
         
-        /* Email Form */
-        .form-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-        
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-top: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .check-icon {
-            color: var(--primary);
-            font-weight: 900;
-        }
-        
         /* Counter Card */
         .counter-card {
             background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
@@ -251,6 +223,28 @@
         .counter-note {
             font-size: 14px;
             color: #fca5a5;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            padding: 20px 48px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(34, 197, 94, 0.3);
         }
         
         /* Section Styles */
@@ -414,6 +408,7 @@
             padding: 48px;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
         
         .pricing-card::before {
@@ -649,108 +644,23 @@
                 font-size: 56px;
             }
             
-            .form-card {
-                padding: 32px 24px;
-            }
-            
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
         }
-
-        /* ConvertKit Form Styling */
-        .formkit-form {
-            background: transparent !important;
-            border: none !important;
-        }
-        
-        .formkit-header {
-            margin-bottom: 20px !important;
-        }
-        
-        .formkit-header h2 {
-            color: var(--text-primary) !important;
-            font-size: 24px !important;
-            font-weight: 800 !important;
-            margin-bottom: 8px !important;
-        }
-        
-        .formkit-subheader {
-            color: var(--text-secondary) !important;
-            font-size: 15px !important;
-        }
-        
-        .formkit-input {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 12px !important;
-            color: var(--text-primary) !important;
-            font-size: 16px !important;
-            padding: 16px 20px !important;
-            transition: all 0.3s !important;
-        }
-        
-        .formkit-input:focus {
-            outline: none !important;
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1) !important;
-        }
-        
-        .formkit-input::placeholder {
-            color: var(--text-muted) !important;
-        }
-        
-        .formkit-submit {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
-            color: #000 !important;
-            border: none !important;
-            border-radius: 12px !important;
-            font-size: 16px !important;
-            font-weight: 700 !important;
-            padding: 16px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-            cursor: pointer !important;
-            transition: transform 0.2s, box-shadow 0.2s !important;
-            width: 100% !important;
-        }
-        
-        .formkit-submit:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 12px 24px rgba(34, 197, 94, 0.3) !important;
-        }
-        
-        .formkit-guarantee {
-            text-align: center !important;
-            font-size: 13px !important;
-            color: var(--text-muted) !important;
-            margin-top: 16px !important;
-        }
-        
-        .formkit-guarantee strong {
-            color: var(--primary) !important;
-        }
-        
-        /* ConvertKit "Built with Kit" branding */
-        .formkit-powered-by-convertkit-container {
-            opacity: 1 !important;
-        }
-        
-        .formkit-powered-by-convertkit {
-            background-color: transparent !important;
-            filter: brightness(0) invert(1) !important;
-            opacity: 0.7 !important;
-        }
     </style>
 </head>
 <body>
+    <!-- ConvertKit Modal Form (Hidden by default) -->
+    <script async data-uid="57eab51c42" src="https://addicted-to-value.kit.com/57eab51c42/index.js"></script>
+
     <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="nav-content">
                 <div class="logo">ADDICTED TO VALUE</div>
-                <a href="#join" class="nav-cta">Join Waitlist</a>
+                <button class="nav-cta" onclick="window.dispatchEvent(new Event('ck-show-modal'))">Join Waitlist</button>
             </div>
         </div>
     </nav>
@@ -787,24 +697,7 @@
                 <div class="counter-note">Lock in $30/month forever before price increases to $67/month</div>
             </div>
             
-            <div class="form-card" id="join">
-                <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
-                
-                <div class="trust-indicators">
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        150+ joined
-                    </div>
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        7 days free
-                    </div>
-                    <div class="trust-item">
-                        <span class="check-icon">✓</span>
-                        No CC required
-                    </div>
-                </div>
-            </div>
+            <button class="cta-button" onclick="window.dispatchEvent(new Event('ck-show-modal'))">Get Early Access</button>
         </div>
     </section>
 
@@ -904,9 +797,9 @@
                         So I'm building a tool that does it automatically. Real-time Discord alerts the second a +EV bet or arbitrage opportunity appears. No more manual scanning. No more missed opportunities.
                     </p>
                     <div style="text-align: center;">
-                        <a href="#join" style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #000; padding: 16px 40px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: transform 0.2s;">
+                        <button class="cta-button" onclick="window.dispatchEvent(new Event('ck-show-modal'))" style="display: inline-block;">
                             Join 150+ Sharp Bettors →
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1172,9 +1065,7 @@
                 <div class="price-period">Locked in forever for founders</div>
                 <div class="price-strike">Regular price: $67/month</div>
                 
-                <div class="form-card" style="border: none; background: transparent; padding: 0;">
-                    <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
-                </div>
+                <button class="cta-button" onclick="window.dispatchEvent(new Event('ck-show-modal'))">Join Waitlist Now</button>
             </div>
         </div>
     </section>
@@ -1213,7 +1104,7 @@
                 <div class="footer-section">
                     <h4>Product</h4>
                     <ul class="footer-links">
-                        <li><a href="#join">Join Waitlist</a></li>
+                        <li><a href="#" onclick="window.dispatchEvent(new Event('ck-show-modal')); return false;">Join Waitlist</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#proof">Results</a></li>
                         <li><a href="#pricing">Pricing</a></li>
@@ -1275,8 +1166,11 @@
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || !href) return;
+                
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth',

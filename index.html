@@ -658,6 +658,79 @@
                 text-align: center;
             }
         }
+
+        /* ConvertKit Form Styling */
+        .formkit-form {
+            background: transparent !important;
+            border: none !important;
+        }
+        
+        .formkit-header {
+            margin-bottom: 20px !important;
+        }
+        
+        .formkit-header h2 {
+            color: var(--text-primary) !important;
+            font-size: 24px !important;
+            font-weight: 800 !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .formkit-subheader {
+            color: var(--text-secondary) !important;
+            font-size: 15px !important;
+        }
+        
+        .formkit-input {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 12px !important;
+            color: var(--text-primary) !important;
+            font-size: 16px !important;
+            padding: 16px 20px !important;
+            transition: all 0.3s !important;
+        }
+        
+        .formkit-input:focus {
+            outline: none !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1) !important;
+        }
+        
+        .formkit-input::placeholder {
+            color: var(--text-muted) !important;
+        }
+        
+        .formkit-submit {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+            color: #000 !important;
+            border: none !important;
+            border-radius: 12px !important;
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            padding: 16px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            cursor: pointer !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+            width: 100% !important;
+        }
+        
+        .formkit-submit:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 12px 24px rgba(34, 197, 94, 0.3) !important;
+        }
+        
+        .formkit-guarantee {
+            text-align: center !important;
+            font-size: 13px !important;
+            color: var(--text-muted) !important;
+            margin-top: 16px !important;
+        }
+        
+        .formkit-guarantee strong {
+            color: var(--primary) !important;
+        }
     </style>
 </head>
 <body>

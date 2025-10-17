@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You're In! | Addicted to Value</title>
-    <meta name="description" content="Thank you for joining the Addicted to Value waitlist.">
+    <title>Email Confirmed! | Addicted to Value</title>
+    <meta name="description" content="Thank you for confirming your email. You're officially on the Addicted to Value waitlist.">
     <style>
         :root {
             --primary: #22c55e;
@@ -54,10 +54,12 @@
             margin-bottom: 32px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            animation: slideDown 0.6s ease-out, pulse 2s ease-in-out 0.6s infinite;
         }
         
         .success-icon {
             font-size: 24px;
+            animation: checkmark 0.8s ease-out 0.3s both;
         }
         
         h1 {
@@ -65,6 +67,7 @@
             font-weight: 900;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
         
         .gradient-text {
@@ -79,6 +82,7 @@
             color: var(--text-secondary);
             margin-bottom: 48px;
             line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
         }
         
         .info-card {
@@ -88,6 +92,25 @@
             padding: 40px;
             margin-bottom: 32px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(34, 197, 94, 0.1),
+                transparent
+            );
+            animation: shimmer 3s infinite;
         }
         
         .info-title {
@@ -95,12 +118,14 @@
             font-weight: 800;
             margin-bottom: 16px;
             color: var(--primary);
+            position: relative;
         }
         
         .info-text {
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 16px;
+            position: relative;
         }
         
         .next-steps {
@@ -122,6 +147,20 @@
             padding: 16px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 8px;
+            opacity: 0;
+            animation: fadeInLeft 0.5s ease-out both;
+        }
+        
+        .step:nth-child(1) {
+            animation-delay: 0.8s;
+        }
+        
+        .step:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .step:nth-child(3) {
+            animation-delay: 1.2s;
         }
         
         .step-number {
@@ -148,6 +187,7 @@
             justify-content: center;
             gap: 16px;
             margin-top: 32px;
+            animation: fadeInUp 0.8s ease-out 1.4s both;
         }
         
         .social-link {
@@ -199,22 +239,87 @@
                 flex-direction: column;
             }
         }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes checkmark {
+            0% {
+                transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2) rotate(45deg);
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="success-badge">
             <span class="success-icon">✓</span>
-            Spot Reserved
+            Email Confirmed
         </div>
         
-        <h1>You're <span class="gradient-text">In!</span></h1>
-        <p class="subtitle">Welcome to the Addicted to Value waitlist. Check your email to confirm your spot.</p>
+        <h1>You're <span class="gradient-text">All Set!</span></h1>
+        <p class="subtitle">Your email is confirmed and you're officially on the Addicted to Value waitlist.</p>
         
         <div class="info-card">
-            <div class="info-title">🎉 Your Spot is Reserved</div>
+            <div class="info-title">🎉 You're Locked In</div>
             <p class="info-text">
-                You're one of the first 200 founders to lock in <strong style="color: var(--primary);">exclusive founder pricing</strong>. We'll email you the moment we launch so you can claim your 7 days free.
+                You're one of the first to join the waitlist. We'll email you the moment we launch so you can be among the first to experience Addicted to Value.
             </p>
             
             <div class="next-steps">
@@ -223,28 +328,21 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-text">
-                        <strong style="color: var(--text-primary);">Check your email</strong> and confirm your subscription (check spam if you don't see it)
+                        <strong style="color: var(--text-primary);">Watch your inbox</strong> for exclusive founder updates and launch announcements
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-text">
-                        <strong style="color: var(--text-primary);">Get launch notification</strong> when we go live in 2-4 weeks
+                        <strong style="color: var(--text-primary);">Get launch notification</strong> when we go live
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-text">
-                        <strong style="color: var(--text-primary);">Start your 7-day trial</strong> with full access to all features
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-text">
-                        <strong style="color: var(--text-primary);">Lock in founder pricing</strong> at $30/month forever (or cancel anytime)
+                        <strong style="color: var(--text-primary);">Be the first to try</strong> Addicted to Value when we launch
                     </div>
                 </div>
             </div>

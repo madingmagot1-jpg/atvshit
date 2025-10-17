@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <script>
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768)) {
@@ -9,8 +9,8 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addicted to Value | Beat the Sportsbooks with Math</title>
-    <meta name="description" content="Real-time +EV betting alerts and arbitrage opportunities.">
+    <title>Addicted to Value | Beat the Bookies with Math</title>
+    <meta name="description" content="Real-time +EV betting alerts and arbitrage opportunities for Australian punters.">
     <style>
         * {
             margin: 0;
@@ -82,6 +82,10 @@
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 16px;
+        }
+        
+        .red-text {
+            color: #ef4444;
         }
         
         .gradient-text {
@@ -192,6 +196,114 @@
             margin-bottom: 32px;
         }
         
+        .bookmakers-section {
+            background: linear-gradient(180deg, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bookmakers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.5), transparent);
+        }
+        
+        .bookmaker-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .bookmaker-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70px;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .bookmaker-card.featured {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.1));
+            border: 2px solid rgba(34, 197, 94, 0.4);
+        }
+        
+        .more-bookies {
+            text-align: center;
+            padding: 16px;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .testimonial-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #22c55e;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        
+        .testimonial-quote {
+            font-size: 15px;
+            color: #e2e8f0;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: #000;
+            flex-shrink: 0;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        
+        .author-role {
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
         .story-card {
             background: rgba(255, 255, 255, 0.05);
             border-left: 4px solid #22c55e;
@@ -297,6 +409,60 @@
             font-size: 14px;
             color: #94a3b8;
             line-height: 1.5;
+        }
+        
+        .faq-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 50px 20px;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .faq-toggle {
+            font-size: 20px;
+            color: #22c55e;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 20px 20px;
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
         }
         
         .cta-section {
@@ -418,12 +584,12 @@
 
     <div class="hero-mobile">
         <div class="badge-mobile">🔥 7 Days Free at Launch</div>
-        <h1>Beat the Sportsbooks with <span class="gradient-text">Math</span></h1>
-        <p class="subtitle-mobile">Real-time +EV betting alerts sent directly to Discord. Join 150+ sharp bettors.</p>
+        <h1>From -$8,247 to <span class="gradient-text">+$127K</span></h1>
+        <p class="subtitle-mobile">Real-time +EV betting alerts sent directly to Discord. Join 150+ sharp punters.</p>
         
         <div class="stats-mobile">
             <div class="stat-mobile">
-                <div class="stat-value">+$128K</div>
+                <div class="stat-value">+$127K</div>
                 <div class="stat-label">16-Month Profit</div>
             </div>
             <div class="stat-mobile">
@@ -432,7 +598,7 @@
             </div>
             <div class="stat-mobile">
                 <div class="stat-value">15+</div>
-                <div class="stat-label">Sportsbooks</div>
+                <div class="stat-label">Bookmakers</div>
             </div>
         </div>
     </div>
@@ -447,21 +613,58 @@
         <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
     </div>
 
+    <section class="bookmakers-section">
+        <h2 class="section-title-mobile">Supported Bookmakers</h2>
+        <p class="section-desc-mobile">We scan odds across all major Australian bookies in real-time</p>
+        
+        <div class="bookmaker-grid">
+            <div class="bookmaker-card featured">Sportsbet</div>
+            <div class="bookmaker-card featured">TAB</div>
+            <div class="bookmaker-card featured">Bet365</div>
+            <div class="bookmaker-card featured">Ladbrokes</div>
+            <div class="bookmaker-card">Neds</div>
+            <div class="bookmaker-card">Pointsbet</div>
+            <div class="bookmaker-card">BlueBet</div>
+            <div class="bookmaker-card">Unibet</div>
+            <div class="bookmaker-card">BoomBet</div>
+            <div class="bookmaker-card">Picklebet</div>
+        </div>
+        
+        <div class="more-bookies">+ PlayUp, TopSport, and more</div>
+    </section>
+
+    <section class="section-mobile">
+        <h2 class="section-title-mobile">What Punters Are Saying</h2>
+        
+        <div class="testimonial-section">
+            <p class="testimonial-quote">
+                "I was completely burned out. I'd been making decent money on the horses for years and knew my stuff, but manually checking Sportsbet, TAB, Bet365, Ladbrokes, Neds and Pointsbet every single day was soul-crushing. I was chained to my laptop for 3-4 hours just scanning for lines that'd move before I could even place the bet. It felt like a second job I couldn't quit. This service changed everything. Now I get a ping on Discord, check the play, and I'm done in 90 seconds. Same opportunities, same money, but I've actually got my time back. Didn't realize how badly I needed this until I had it."
+            </p>
+            <div class="testimonial-author">
+                <div class="author-avatar">E</div>
+                <div class="author-info">
+                    <div class="author-name">Emerson L.</div>
+                    <div class="author-role">Beta Tester</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-mobile section-dark">
         <h2 class="section-title-mobile">My Story</h2>
-        <p class="section-desc-mobile">From -$8,247 to +$127,893 in 16 months</p>
+        <p class="section-desc-mobile">How I turned it all around</p>
         
         <div class="story-card red">
             <div class="story-icon">📉</div>
             <div class="story-title">Rock Bottom: -$8,247</div>
-            <p class="story-text">I was like most bettors. Betting on favorites, chasing streaks, convinced I had an edge.</p>
+            <p class="story-text">I was like most punters. Betting on favourites, chasing streaks, convinced I had an edge.</p>
             <p class="story-text"><strong>Spoiler: I didn't.</strong></p>
         </div>
 
         <div class="story-card blue">
             <div class="story-icon">💡</div>
             <div class="story-title">The Lightbulb Moment</div>
-            <p class="story-text">I discovered +EV betting. Sharp bettors don't bet on who they think will win—they bet when the odds are mathematically in their favor.</p>
+            <p class="story-text">I discovered +EV betting. Sharp punters don't bet on who they think will win—they bet when the odds are mathematically in their favour.</p>
         </div>
 
         <div class="story-card">
@@ -477,7 +680,7 @@
             <p class="story-text">But finding +EV bets manually takes HOURS. So I built a tool that does it automatically.</p>
         </div>
 
-        <a href="#join" class="cta-button">Join 150+ Sharp Bettors →</a>
+        <a href="#join" class="cta-button">Join 150+ Sharp Punters →</a>
     </section>
 
     <section class="section-mobile">
@@ -531,7 +734,7 @@
         <div class="feature-mobile">
             <div class="feature-icon">⚡</div>
             <div class="feature-title">Real-Time Alerts</div>
-            <div class="feature-desc">Discord notifications within 90 seconds across 15+ sportsbooks.</div>
+            <div class="feature-desc">Discord notifications within 90 seconds across 15+ bookmakers.</div>
         </div>
 
         <div class="feature-mobile">
@@ -555,13 +758,114 @@
         <div class="feature-mobile">
             <div class="feature-icon">💬</div>
             <div class="feature-title">Sharp Community</div>
-            <div class="feature-desc">24/7 Discord with experienced bettors.</div>
+            <div class="feature-desc">24/7 Discord with experienced punters.</div>
         </div>
 
         <div class="feature-mobile">
-            <div class="feature-icon">🏈</div>
+            <div class="feature-icon">🏉</div>
             <div class="feature-title">All Major Sports</div>
-            <div class="feature-desc">NFL, NBA, MLB, NHL, UFC, and more.</div>
+            <div class="feature-desc">AFL, NRL, cricket, racing, and more.</div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="section-title-mobile">Frequently Asked Questions</h2>
+        <p class="section-desc-mobile">Everything you need to know</p>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What is +EV betting?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    +EV (positive expected value) betting means betting when the odds are mathematically in your favour. Instead of betting on who you think will win, you bet when bookmakers have priced something incorrectly. Over time, this leads to consistent profits.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How much can I make?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Results vary based on your bankroll, time commitment, and how many bookmakers you have access to. Our members typically see 5-15% monthly ROI. The key is treating this like a business, not gambling.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Do I need accounts with all bookies?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    No, but the more accounts you have, the more opportunities you'll catch. Most members start with 3-5 bookmakers and expand from there. We'll show you exactly how to set everything up.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>How much time does this take?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Most members spend 30-90 minutes per day. You get a Discord notification, check the alert, place the bet, and you're done. No need to manually scan bookmakers for hours like you would doing this yourself.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What sports do you cover?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    We cover all major sports: AFL, NRL, cricket, horse racing, NBA, NFL, MLB, soccer, UFC, and more. Opportunities come up across all sports daily.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Will bookies limit my account?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    It's possible if you're consistently profitable. We teach strategies to minimize this risk and how to handle it when it happens. Many of our members have been operating for years without issues.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>Is this legal in Australia?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Yes, absolutely. We're simply providing betting education and alerts. You're placing legal bets with licensed Australian bookmakers. Nothing we do is illegal or against any rules.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>What if I'm a complete beginner?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    Perfect! We include complete education covering everything from the basics to advanced strategies. Many of our most successful members started with zero experience. You just need to be willing to learn.
+                </div>
+            </div>
         </div>
     </section>
 
@@ -601,7 +905,7 @@
         <div class="disclaimer-mobile">
             <div class="disclaimer-title">⚠️ Important Disclaimer</div>
             <p class="disclaimer-text">
-                Sports betting involves risk. Past performance doesn't guarantee future results. Users must be 21+ and comply with local gambling laws. Only bet what you can afford to lose. If you have a gambling problem, call 1-800-GAMBLER.
+                Sports betting involves risk. Past performance doesn't guarantee future results. Users must be 18+ and comply with Australian gambling laws. Only bet what you can afford to lose. If you have a gambling problem, call Gambling Help on 1800 858 858.
             </p>
         </div>
 
@@ -634,6 +938,19 @@
             const spotsRemaining = totalSpots - spotsFilledCount;
             const display = `${spotsRemaining} / ${totalSpots}`;
             document.getElementById('spotsCounter').textContent = display;
+        }
+        
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
         }
         
         updateSpotsCounter();

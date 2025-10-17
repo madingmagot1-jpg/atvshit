@@ -135,6 +135,24 @@
             margin-bottom: 32px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
         
         .badge-pulse {
@@ -711,15 +729,15 @@
             
             <div class="stats-row">
                 <div class="stat">
-                    <div class="stat-value">+$127K</div>
+                    <div class="stat-value" data-target="127000" data-prefix="+$">+$0</div>
                     <div class="stat-label">16-Month Profit</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">9.20%</div>
+                    <div class="stat-value" data-target="9.20" data-suffix="%">0%</div>
                     <div class="stat-label">Average ROI</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">15+</div>
+                    <div class="stat-value" data-target="15" data-suffix="+">0+</div>
                     <div class="stat-label">Bookmakers</div>
                 </div>
             </div>
@@ -778,6 +796,7 @@
             <div class="testimonial-card">
                 <p class="testimonial-quote">
                     "I was completely burned out. I'd been making decent money for years and knew my stuff, but manually checking Sportsbet, TAB, Bet365, Ladbrokes, Neds and Pointsbet every single day was soul-crushing. I was chained to my laptop for 3-4 hours just scanning for lines that'd move before I could even place the bet. It felt like a second job I couldn't quit. This service changed everything. It's a simple as a ping on my phone, then I place the bet and I'm done in 90 seconds. Same thing as before but I've actually got my time back. Didn't realise how badly I needed this until I had it."
+                </p>
                 <div class="testimonial-author">
                     <div class="author-avatar">E</div>
                     <div>
@@ -1160,6 +1179,39 @@
                 }
             });
         });
+        
+        // COUNT-UP ANIMATION ADDED
+        function animateCountUp() {
+            const stats = document.querySelectorAll('.stat-value[data-target]');
+            stats.forEach(stat => {
+                const target = parseFloat(stat.getAttribute('data-target'));
+                const prefix = stat.getAttribute('data-prefix') || '';
+                const suffix = stat.getAttribute('data-suffix') || '';
+                const duration = 2000;
+                const steps = 60;
+                const increment = target / steps;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayValue;
+                    if (target >= 1000) {
+                        displayValue = Math.floor(current / 1000) + 'K';
+                    } else {
+                        displayValue = current.toFixed(2);
+                    }
+                    
+                    stat.textContent = prefix + displayValue + suffix;
+                }, duration / steps);
+            });
+        }
+        
+        window.addEventListener('load', animateCountUp);
     </script>
 </body>
 </html>

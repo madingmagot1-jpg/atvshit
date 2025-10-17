@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addicted to Value | Beat the Sportsbooks with Math</title>
     <meta name="description" content="Real-time +EV betting alerts and arbitrage opportunities. $54,645 profit in 4 months, fully tracked and verified.">
+    
+    <!-- COPY EVERYTHING FROM HERE DOWN AND SAVE AS index.html -->
+    
     <style>
         :root {
             --primary: #22c55e;
@@ -243,6 +246,8 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
         }
         
         .counter-display {
@@ -251,11 +256,25 @@
             color: var(--danger);
             line-height: 1;
             margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+            animation: countPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes countPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
         
         .counter-note {
             font-size: 14px;
             color: #fca5a5;
+            position: relative;
+            z-index: 1;
         }
         
         section {
@@ -692,7 +711,7 @@
             <div class="counter-card">
                 <div class="counter-label">⚠️ Founder Spots Remaining</div>
                 <div class="counter-display" id="spotsCounter">50 / 200</div>
-                <div class="counter-note">Lock in $30/month forever before price increases to $67/month</div>
+                <div class="counter-note">Get 7 days FREE when we launch. First 200 founders only.</div>
             </div>
             
             <div id="join">
@@ -920,15 +939,41 @@
     <section style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(16, 185, 129, 0.03));">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Founder Pricing</span>
-                <h2 class="section-title">Lock In $30/Month Forever</h2>
-                <p class="section-description">First 200 members get lifetime access at $30/month. After that, price increases to $67/month.</p>
+                <span class="section-label">Founder Access</span>
+                <h2 class="section-title">Join the First 200 Founders</h2>
+                <p class="section-description">Limited founding member spots with exclusive perks. Get 7 days completely free when we launch.</p>
             </div>
             
             <div class="pricing-card">
-                <div class="price-tag">$30<span style="font-size: 28px; color: var(--text-secondary);">/mo</span></div>
-                <div class="price-period">Locked in forever for founders</div>
-                <div class="price-strike">Regular price: $67/month</div>
+                <div style="text-align: center; margin-bottom: 32px;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.1)); border: 2px solid var(--primary); border-radius: 12px; padding: 20px 40px; margin-bottom: 24px;">
+                        <div style="font-size: 48px; font-weight: 900; color: var(--primary); line-height: 1;">7 DAYS FREE</div>
+                        <div style="font-size: 16px; color: var(--text-secondary); margin-top: 8px;">For all founding members</div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 32px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="color: var(--primary); font-size: 24px;">✓</span>
+                        <span style="color: var(--text-primary); font-size: 16px;">7 days completely free at launch</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="color: var(--primary); font-size: 24px;">✓</span>
+                        <span style="color: var(--text-primary); font-size: 16px;">Locked-in founder pricing forever</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="color: var(--primary); font-size: 24px;">✓</span>
+                        <span style="color: var(--text-primary); font-size: 16px;">Priority access to new features</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="color: var(--primary); font-size: 24px;">✓</span>
+                        <span style="color: var(--text-primary); font-size: 16px;">Exclusive founder community access</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="color: var(--primary); font-size: 24px;">✓</span>
+                        <span style="color: var(--text-primary); font-size: 16px;">Cancel anytime, no commitment</span>
+                    </div>
+                </div>
                 
                 <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
             </div>

@@ -49,7 +49,6 @@
             font-weight: 700;
             font-size: 12px;
             text-decoration: none;
-            border: none;
         }
         
         .hero-mobile {
@@ -69,37 +68,15 @@
             text-transform: uppercase;
             margin-bottom: 20px;
             letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
             animation: radiate 2s ease-in-out infinite;
-        }
-        
-        .badge-mobile::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
         }
         
         @keyframes radiate {
             0%, 100% {
-                box-shadow: 0 0 15px rgba(34, 197, 94, 0.4),
-                            0 0 30px rgba(34, 197, 94, 0.2),
-                            0 0 45px rgba(34, 197, 94, 0.1);
+                box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
             }
             50% {
-                box-shadow: 0 0 25px rgba(34, 197, 94, 0.6),
-                            0 0 50px rgba(34, 197, 94, 0.4),
-                            0 0 75px rgba(34, 197, 94, 0.2);
+                box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
             }
         }
         
@@ -168,11 +145,9 @@
         @keyframes pulse {
             0%, 100% { 
                 border-color: rgba(239, 68, 68, 0.4);
-                box-shadow: 0 0 0 rgba(239, 68, 68, 0);
             }
             50% { 
                 border-color: rgba(239, 68, 68, 0.8);
-                box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
             }
         }
         
@@ -222,7 +197,6 @@
             margin-bottom: 32px;
         }
         
-        /* ALERT SECTION */
         .alert-showcase-mobile {
             background: #1a1f3a;
             border: 2px solid rgba(34, 197, 94, 0.3);
@@ -267,22 +241,9 @@
             color: #94a3b8;
         }
         
-        /* BOOKMAKERS */
         .bookmakers-section {
             background: linear-gradient(180deg, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
             padding: 50px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .bookmakers-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.5), transparent);
         }
         
         .bookmaker-grid {
@@ -302,11 +263,8 @@
             justify-content: center;
             min-height: 70px;
             font-weight: 700;
-            color: #ffffff;
             font-size: 15px;
             text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
         }
         
         .bookmaker-card.featured {
@@ -322,7 +280,6 @@
             font-weight: 600;
         }
         
-        /* PROOF SECTION */
         .proof-banner-mobile {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.1));
             border: 2px solid #22c55e;
@@ -414,7 +371,6 @@
             line-height: 1.7;
         }
         
-        /* STORY */
         .story-card {
             background: rgba(255, 255, 255, 0.05);
             border-left: 4px solid #22c55e;
@@ -479,7 +435,6 @@
             margin: 20px 0;
         }
         
-        /* TESTIMONIAL */
         .testimonial-section {
             background: rgba(255, 255, 255, 0.05);
             border-left: 4px solid #22c55e;
@@ -516,14 +471,9 @@
             flex-shrink: 0;
         }
         
-        .author-info {
-            flex: 1;
-        }
-        
         .author-name {
             font-weight: 700;
             font-size: 16px;
-            color: #fff;
             margin-bottom: 2px;
         }
         
@@ -534,7 +484,6 @@
             letter-spacing: 0.5px;
         }
         
-        /* FEATURES */
         .feature-mobile {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -560,7 +509,6 @@
             line-height: 1.5;
         }
         
-        /* FAQ */
         .faq-section {
             background: rgba(0, 0, 0, 0.3);
             padding: 50px 20px;
@@ -578,12 +526,10 @@
             padding: 20px;
             font-weight: 700;
             font-size: 16px;
-            color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            user-select: none;
         }
         
         .faq-toggle {
@@ -615,14 +561,12 @@
             max-height: 500px;
         }
         
-        /* CTA SECTION */
         .cta-section {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.05));
             padding: 40px 20px;
             text-align: center;
         }
         
-        /* FOOTER */
         .footer-mobile {
             background: rgba(0, 0, 0, 0.5);
             padding: 40px 20px;
@@ -714,7 +658,6 @@
         <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
     </div>
 
-    <!-- ALERT SECTION -->
     <section class="section-mobile">
         <h2 class="section-title-mobile">Here's What Lands in Your Phone</h2>
         <p class="section-desc-mobile">Every alert has everything you need in under 2 minutes</p>
@@ -742,7 +685,6 @@
         </div>
     </section>
 
-    <!-- BOOKMAKERS -->
     <section class="bookmakers-section">
         <h2 class="section-title-mobile">Supported Bookmakers</h2>
         <p class="section-desc-mobile">We scan odds across all major Australian bookies in real-time</p>
@@ -763,7 +705,6 @@
         <div class="more-bookies">+ PlayUp, TopSport, and more</div>
     </section>
 
-    <!-- PROOF -->
     <section class="section-mobile section-dark">
         <h2 class="section-title-mobile">Every Day Tracked</h2>
         <p class="section-desc-mobile">Green days AND red days. All shown below.</p>
@@ -820,7 +761,6 @@
         </div>
     </section>
 
-    <!-- MY STORY -->
     <section class="section-mobile">
         <h2 class="section-title-mobile">My Story</h2>
         <p class="section-desc-mobile">How I turned it all around</p>
@@ -828,6 +768,13 @@
         <div class="story-card red">
             <div class="story-icon">📉</div>
             <div class="story-title">Rock Bottom: -$8,247</div>
+            <p class="story-text">I was like most punters. Betting on favourites, chasing streaks, convinced I had an edge.</p>
+            <p class="story-text"><strong style="color: #fff;">Spoiler: I didn't.</strong></p>
+        </div>
+
+        <div class="story-card blue">
+            <div class="story-icon">💡</div>
+            <div class="story-title">The Lightbulb Moment</div>
             <p class="story-text">I discovered <strong style="color: #fff;">+EV betting</strong>. Sharp punters don't bet on who they think will win—they bet when the odds are mathematically in their favour.</p>
         </div>
 
@@ -847,7 +794,6 @@
         <a href="#join" class="cta-button-mobile">Join 150+ Sharp Punters →</a>
     </section>
 
-    <!-- TESTIMONIAL -->
     <section class="section-mobile section-dark">
         <h2 class="section-title-mobile">What Punters Are Saying</h2>
         
@@ -857,7 +803,7 @@
             </p>
             <div class="testimonial-author">
                 <div class="author-avatar">E</div>
-                <div class="author-info">
+                <div>
                     <div class="author-name">Emerson L.</div>
                     <div class="author-role">Beta Tester</div>
                 </div>
@@ -865,7 +811,6 @@
         </div>
     </section>
 
-    <!-- FEATURES -->
     <section class="section-mobile">
         <h2 class="section-title-mobile">What You Get</h2>
         
@@ -906,7 +851,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="faq-section">
         <h2 class="section-title-mobile">Frequently Asked Questions</h2>
         <p class="section-desc-mobile">Everything you need to know</p>
@@ -1008,7 +952,6 @@
         </div>
     </section>
 
-    <!-- FINAL CTA -->
     <section class="cta-section">
         <h2 class="section-title-mobile">Lock In 7 Days Free</h2>
         <p class="section-desc-mobile">First 200 members get exclusive founder access</p>
@@ -1016,7 +959,6 @@
         <script async data-uid="57eab51c42" src="https://addictedtovalue.kit.com/57eab51c42/index.js"></script>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer-mobile">
         <div class="disclaimer-mobile">
             <div class="disclaimer-title">⚠️ Important Disclaimer</div>
@@ -1072,11 +1014,4 @@
         updateSpotsCounter();
     </script>
 </body>
-</html>I was like most punters. Betting on favourites, chasing streaks, convinced I had an edge.</p>
-            <p class="story-text"><strong style="color: #fff;">Spoiler: I didn't.</strong></p>
-        </div>
-
-        <div class="story-card blue">
-            <div class="story-icon">💡</div>
-            <div class="story-title">The Lightbulb Moment</div>
-            <p class="story-text">
+</html>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Confirmed! | Addicted to Value</title>
-    <meta name="description" content="Thank you for confirming your email. You're officially on the Addicted to Value waitlist.">
+    <title>Welcome to Addicted to Value! 🎉</title>
+    <meta name="description" content="You're in! Here's how to get started with your Addicted to Value membership.">
     <style>
         :root {
             --primary: #22c55e;
             --primary-dark: #16a34a;
-            --bg-dark: #0a0e27;
-            --bg-card: #1a1f3a;
+            --bg-dark: #0d1b2a;
+            --bg-card: #1b263b;
             --text-primary: #ffffff;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
@@ -36,7 +36,7 @@
         }
         
         .container {
-            max-width: 600px;
+            max-width: 700px;
             text-align: center;
         }
         
@@ -90,7 +90,7 @@
             border: 1px solid rgba(34, 197, 94, 0.2);
             border-radius: 16px;
             padding: 40px;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             animation: fadeInUp 0.8s ease-out 0.6s both;
             position: relative;
@@ -136,37 +136,39 @@
         .next-steps h3 {
             font-size: 18px;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             color: var(--text-primary);
+            text-align: center;
         }
         
         .step {
             display: flex;
             gap: 16px;
             margin-bottom: 16px;
-            padding: 16px;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             opacity: 0;
             animation: fadeInLeft 0.5s ease-out both;
         }
         
-        .step:nth-child(1) {
+        .step:nth-child(2) {
             animation-delay: 0.8s;
         }
         
-        .step:nth-child(2) {
+        .step:nth-child(3) {
             animation-delay: 1s;
         }
         
-        .step:nth-child(3) {
+        .step:nth-child(4) {
             animation-delay: 1.2s;
         }
         
         .step-number {
             flex-shrink: 0;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #000;
             border-radius: 50%;
@@ -174,20 +176,54 @@
             align-items: center;
             justify-content: center;
             font-weight: 900;
+            font-size: 18px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
             font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
         }
         
         .step-text {
             color: var(--text-secondary);
             line-height: 1.6;
+            font-size: 15px;
+        }
+        
+        .discord-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #000;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 18px;
+            margin-top: 32px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            animation: fadeInUp 0.8s ease-out 1.4s both;
+        }
+        
+        .discord-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 16px;
-            margin-top: 32px;
-            animation: fadeInUp 0.8s ease-out 1.4s both;
+            margin-top: 40px;
+            animation: fadeInUp 0.8s ease-out 1.6s both;
         }
         
         .social-link {
@@ -207,23 +243,25 @@
         }
         
         .social-link:hover {
-            background: var(--primary);
-            color: #000;
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--primary);
             border-color: var(--primary);
             transform: translateY(-2px);
         }
         
-        .back-link {
-            display: inline-block;
+        .reminder {
             margin-top: 32px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
+            padding: 20px;
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            animation: fadeInUp 0.8s ease-out 1.8s both;
         }
         
-        .back-link:hover {
-            color: var(--primary);
+        .reminder-text {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
         }
         
         @media (max-width: 768px) {
@@ -237,6 +275,10 @@
             
             .social-links {
                 flex-direction: column;
+            }
+            
+            .step {
+                padding: 16px;
             }
         }
         
@@ -310,45 +352,51 @@
     <div class="container">
         <div class="success-badge">
             <span class="success-icon">✓</span>
-            Email Confirmed
+            Payment Confirmed
         </div>
         
-        <h1>You're <span class="gradient-text">All Set!</span></h1>
-        <p class="subtitle">Your email is confirmed and you're officially on the Addicted to Value waitlist.</p>
+        <h1>Welcome to <span class="gradient-text">Addicted to Value!</span></h1>
+        <p class="subtitle">You're officially in. Here's how to get started and receive your first alerts.</p>
         
         <div class="info-card">
-            <div class="info-title">🎉 You're Locked In</div>
-            <p class="info-text">
-                You're one of the first to join the waitlist. We'll email you the moment we launch so you can be among the first to experience Addicted to Value.
-            </p>
+            <div class="info-title">Your Next Steps:</div>
             
             <div class="next-steps">
-                <h3>What Happens Next:</h3>
+                <h3>Get Access in 2 Minutes</h3>
                 
                 <div class="step">
                     <div class="step-number">1</div>
-                    <div class="step-text">
-                        <strong style="color: var(--text-primary);">Watch your inbox</strong> for exclusive founder updates and launch announcements
+                    <div class="step-content">
+                        <div class="step-title">Connect Your Discord Account</div>
+                        <div class="step-text">Go to your Whop Hub → Settings → Connected Accounts → Add Discord account and authorize.</div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div class="step-text">
-                        <strong style="color: var(--text-primary);">Get launch notification</strong> when we go live
+                    <div class="step-content">
+                        <div class="step-title">Claim Your Discord Access</div>
+                        <div class="step-text">Click the button below to go to your Whop Hub, find the Discord app, and click "Claim Access" to join automatically.</div>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <div class="step-text">
-                        <strong style="color: var(--text-primary);">Be the first to try</strong> Addicted to Value when we launch
+                    <div class="step-content">
+                        <div class="step-title">Enable Mobile Notifications</div>
+                        <div class="step-text">Download Discord mobile app and turn on notifications. Alerts are sent within 90 seconds—speed matters.</div>
                     </div>
                 </div>
             </div>
             
-            <p class="info-text" style="margin-top: 32px; font-size: 14px; color: var(--text-muted);">
-                💡 <strong style="color: var(--text-primary);">Pro tip:</strong> Follow us on Instagram for exclusive founder updates, behind-the-scenes content, and early strategy tips.
+            <a href="https://whop.com/hub/" target="_blank" class="discord-button">
+                Go to Your Whop Hub →
+            </a>
+        </div>
+        
+        <div class="reminder">
+            <p class="reminder-text">
+                <strong style="color: var(--text-primary);">Need help?</strong> If you have trouble connecting Discord, visit your Whop Hub settings to connect your Discord account first, then claim access to the server.
             </p>
         </div>
         
@@ -357,7 +405,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
-                Follow on Instagram
+                Follow Us
             </a>
             
             <a href="mailto:contact@addictedtovalue.com" class="social-link">
@@ -365,24 +413,26 @@
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                Email Us
+                Support
             </a>
         </div>
-        
-        <a href="/" class="back-link">← Back to homepage</a>
     </div>
     
     <script>
         // Track successful conversion
         if (typeof fbq !== 'undefined') {
-            fbq('track', 'Lead');
+            fbq('track', 'Purchase', {
+                value: 45.00,
+                currency: 'AUD'
+            });
         }
         
         if (typeof gtag !== 'undefined') {
             gtag('event', 'conversion', {
                 'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-                'event_category': 'signup',
-                'event_label': 'waitlist'
+                'value': 45.00,
+                'currency': 'AUD',
+                'transaction_id': ''
             });
         }
     </script>
